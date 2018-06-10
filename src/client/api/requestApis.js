@@ -2,7 +2,7 @@
 exports.onAuthState = function (User) {
     const requestApiOn = new XMLHttpRequest();
 
-    requestApiOn.open("GET", "https://3000-dot-3945732-dot-devshell.appspot.com/api/onAuth", true);
+    requestApiOn.open("GET", "http://localhost:3000/api/onAuth", true);
     requestApiOn.setRequestHeader('Content-type', 'application/json; ');
     requestApiOn.send();
 
@@ -33,7 +33,7 @@ exports.signInAuth = function (email, password) {
 
     const requestApiSignIn = new XMLHttpRequest();
 
-    requestApiSignIn.open('POST', "https://3000-dot-3945732-dot-devshell.appspot.com/api/signin", true);
+    requestApiSignIn.open('POST', "http://localhost:3000/api/signin", true);
     requestApiSignIn.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     requestApiSignIn.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -61,7 +61,7 @@ exports.signUpAuth = function (username, email, password, passwordConf) {
 
     const requestApiSignUp = new XMLHttpRequest();
 
-    requestApiSignUp.open("POST", "https://3000-dot-3945732-dot-devshell.appspot.com/api/signup", true);
+    requestApiSignUp.open("POST", "http://localhost:3000/api/signup", true);
     requestApiSignUp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     requestApiSignUp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 201) {
@@ -84,7 +84,7 @@ exports.signUpAuth = function (username, email, password, passwordConf) {
 exports.signOutAuth = function () {
     const requestApisOutAuth = new XMLHttpRequest();
 
-    requestApisOutAuth.open('GET', "https://3000-dot-3945732-dot-devshell.appspot.com/api/logout", true);
+    requestApisOutAuth.open('GET', "http://localhost:3000/api/logout", true);
     requestApisOutAuth.setRequestHeader('Content-type', 'application/json; ');
     requestApisOutAuth.send()
 
@@ -109,7 +109,7 @@ exports.signOutAuth = function () {
 exports.logUsers = function (Log) {
     const requestApiLogUser = new XMLHttpRequest();
 
-    requestApiLogUser.open("GET", "https://3000-dot-3945732-dot-devshell.appspot.com/api/log_users", true);
+    requestApiLogUser.open("GET", "http://localhost:3000/api/log_users", true);
     requestApiLogUser.setRequestHeader('Content-type', 'application/json; ');
     requestApiLogUser.send();
 
@@ -131,7 +131,7 @@ exports.logUsers = function (Log) {
 exports.personalUser = function (User, UrlID) {
     const requestApiPersonolUsers = new XMLHttpRequest();
 
-    requestApiPersonolUsers.open("GET", `https://3000-dot-3945732-dot-devshell.appspot.com/api/user/id=${UrlID}`, true);
+    requestApiPersonolUsers.open("GET", `http://localhost:3000/api/user/id=${UrlID}`, true);
     requestApiPersonolUsers.setRequestHeader('Content-type', 'application/json; ');
     requestApiPersonolUsers.send();
 
@@ -153,7 +153,7 @@ exports.personalUser = function (User, UrlID) {
 exports.publicUser = function (User, userIDs) {
     const requestApiPubliclUser = new XMLHttpRequest();
 
-    requestApiPubliclUser.open("GET", `https://3000-dot-3945732-dot-devshell.appspot.com/api/users/${userIDs}`, true);
+    requestApiPubliclUser.open("GET", `http://localhost:3000/api/users/${userIDs}`, true);
     requestApiPubliclUser.setRequestHeader('Content-type', 'application/json; ');
     requestApiPubliclUser.send();
 
@@ -175,7 +175,7 @@ exports.publicUser = function (User, userIDs) {
 exports.publicUserOffline = function (User, userIDs) {
     const requestApiPubliclUserOffline = new XMLHttpRequest();
 
-    requestApiPubliclUserOffline.open("GET", `https://3000-dot-3945732-dot-devshell.appspot.com/api/users/${userIDs}`, true);
+    requestApiPubliclUserOffline.open("GET", `http://localhost:3000/api/users/${userIDs}`, true);
     requestApiPubliclUserOffline.setRequestHeader('Content-type', 'application/json; ');
     requestApiPubliclUserOffline.send();
 
@@ -197,7 +197,7 @@ exports.publicUserOffline = function (User, userIDs) {
 exports.publicUsers = function (User) {
     const requestApiPubliclUser = new XMLHttpRequest();
 
-    requestApiPubliclUser.open("GET", `https://3000-dot-3945732-dot-devshell.appspot.com/api/users`, true);
+    requestApiPubliclUser.open("GET", `http://localhost:3000/api/users`, true);
     requestApiPubliclUser.setRequestHeader('Content-type', 'application/json; ');
     requestApiPubliclUser.send();
 
@@ -221,7 +221,7 @@ exports.publicUsers = function (User) {
 exports.deleteLogUsers = function (userId) {
     const requestApiDeleteLogUser = new XMLHttpRequest();
 
-    requestApiDeleteLogUser.open("DELETE", `https://3000-dot-3945732-dot-devshell.appspot.com/api/delete_log_users/${userId}`, true);
+    requestApiDeleteLogUser.open("DELETE", `http://localhost:3000/api/delete_log_users/${userId}`, true);
     requestApiDeleteLogUser.setRequestHeader('Content-type', 'application/json; ');
     requestApiDeleteLogUser.send();
 

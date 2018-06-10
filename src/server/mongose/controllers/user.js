@@ -14,7 +14,7 @@ const Response = require('../common/response');
 // img path
 // var img  = require ('../../../client/img/user.jpg')
 
-var imgPath = `https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?resize=256%2C256&quality=100`
+var imgPath = `/home/pineapplestudio7/full-stack-react-profile/src/client/img/user.jpg`
 
 exports.authSignUp = (req, res, next) => {
     // confirm that user typed same password twice
